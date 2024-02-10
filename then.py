@@ -42,9 +42,9 @@ x = 70
 start_time = time.time
 cur_time = start_time
 for i in range(num_cards):
-    new_card = Label(x, 170, 70, 100, YELLOW)
+    new_card = Label(x, 160, 70, 100, YELLOW)
     new_card.outline(BLUE, 10)
-    new_card.set_text('CLICK', 26)
+    new_card.set_text('CLICK', 20)
     cards.append(new_card)
     x = x + 100
 
@@ -52,17 +52,17 @@ wait = 0
 start_time = time.time()
 cur_time = start_time
 time_text = Label(0,0,50,50,back)
-time_text.set_text('Время',40,DARK_BLUE)
+time_text.set_text('Время:',36,DARK_BLUE)
 time_text.draw(20,20)
-timer = Label(50,55,50,40,back)
-timer.set_text('0', 40,DARK_BLUE)
+timer = Label(100,65,50,40,back)
+timer.set_text('0', 30,DARK_BLUE)
 timer.draw(0,0)
 
 score_text = Label(380,0,50,50,back)
-score_text.set_text('Счёт:',45,DARK_BLUE)
+score_text.set_text('Счёт:',35,DARK_BLUE)
 score_text.draw(20,20)
-score = Label(430,55,50,40,back)
-score.set_text('0',40,DARK_BLUE)
+score = Label(430,65,50,40,back)
+score.set_text('0',30,DARK_BLUE)
 score.draw(0,0)
 
 
@@ -87,7 +87,7 @@ while True:
         break
     new_time = time.time()
     if new_time - cur_time >= 1:
-        timer.set_text(str(int(new_time - start_time)), 40, DARK_BLUE)
+        timer.set_text(str(int(new_time - start_time)), 30, DARK_BLUE)
         timer.draw(0,0)
         cur_time = new_time
     
@@ -125,23 +125,6 @@ while True:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
 
 
 
